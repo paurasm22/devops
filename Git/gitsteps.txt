@@ -1,0 +1,52 @@
+To perform Git operations for branching and merging, follow these steps:
+
+1. Create a Branch
+To create a new branch, use the following command:
+
+bash
+Copy code
+git branch <branch-name>
+For example, to create a branch named feature-branch, you would run:
+
+bash
+Copy code
+git branch feature-branch
+If you want to create and switch to the new branch immediately, use:
+
+bash
+Copy code
+git checkout -b <branch-name>
+2. Merge Branch
+To merge a branch into your current branch, follow these steps:
+
+Switch to the branch you want to merge into (usually main or master):
+
+bash
+Copy code
+git checkout main
+Merge the desired branch (e.g., feature-branch) into the current branch:
+
+bash
+Copy code
+git merge feature-branch
+3. Delete a Branch
+To delete a branch after merging, you can use the following command:
+
+bash
+Copy code
+git branch -d <branch-name>
+For example, to delete the feature-branch, run:
+
+bash
+Copy code
+git branch -d feature-branch
+If you want to forcefully delete a branch (for example, if it hasn’t been merged), use:
+
+bash
+Copy code
+git branch -D <branch-name>
+Summary
+Create a branch: git branch <branch-name> or git checkout -b <branch-name>
+Merge a branch: git checkout main then git merge <branch-name>
+Delete a branch: git branch -d <branch-name> or git branch -D <branch-name>
+Make sure to resolve any merge conflicts that might arise during the merging process.
