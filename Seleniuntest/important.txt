@@ -1,0 +1,120 @@
+In Selenium setup of IntelIj is important 
+
+1.install intelij
+
+2.during setup check add porject to java , add path tick and desktop icon
+
+3.create a new project and build system with maven 
+
+4.go to maven repo and install jars of 
+selenium , testNg , slf4j , and jcommander
+
+5.Then go to file->project structure->select library files and select all the 4 downloaded jar files 
+
+6.Then go to project structure->modules->+->jars and directories ->and select all 4 downloaded jar files 
+
+7.Then in pom.xml -> below propertiies tag ->right click and select generate
+
+search for the artifact selenium.selenium.java or copy paste this ! 
+ <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.25.0</version>
+        </dependency>
+    </dependencies>
+
+
+8.at the right sidebar a M icon will be there so click on that and reload button to refresh/reload the dependencies 
+
+This is the basic setup for Intelij 
+
+
+
+If the question is 
+Setup your Eclipse to run Selenium – TestNG tests and execute selenium test case using Maven project with TestNG- swaglabs
+
+so go to test->java folder->new and create a new java class name it as seleniumtest
+and paste this code 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+//here testNG is used
+public class seleniumtest {
+    @Test
+//    public void testjava1(){
+//        WebDriver driver = new ChromeDriver();
+//        driver.get("https://google.com");
+//
+//    }
+    public void testsauce() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.saucedemo.com/v1/");
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
+
+    }
+}
+
+
+
+
+
+If the experiment is 6.	Setup your Eclipse to run Selenium tests and execute selenium test case using Maven project swaglabs-without testNG
+
+Go to Main.java file and paste this code ! 
+package org.example;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//test ng is not used
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.saucedemo.com/v1/");
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
+        }
+
+}
+
+
+
+if the question is 5.	Setup your Eclipse to run Selenium tests and execute selenium test case using java project- 
+
+
+for this the process is:
+1.Create a new Project and while naming select the build system as intlij 
+2.Then go to https://www.selenium.dev/  -> downloads and install java plugin it will be a zip file extract that .  
+3. Then go to project structure->modules->dependencies and select all the jar files in the selenium folder downloaded and extracted
+4.Do this same in project structure->libraries too 
+
+
+go to Main.java file and 
+copy paste this code 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//only java
+
+public class Main {
+    public static void main(String[] args) {
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.saucedemo.com/v1/");
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
+
+
+    }
+}
+if by chance its not working then install the 4 jars mentioned above mention in modules and libraries and then try ! 

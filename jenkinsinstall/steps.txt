@@ -1,0 +1,17 @@
+1. Click on New Item
+2.Enter a name for your job (e.g., `JavaHelloWorld`), select **Freestyle project**, and click **OK**
+3. Set the custom workspace to : C:\ProgramData\Jenkins\.jenkins\workspace\java
+4. In Build steps select Windows Batch commands and enter this ! 
+cd C:\Users\Pauras\Desktop\Devops\jenkinsinstall
+javac HelloWorld.java
+java HelloWorld
+5 Save the job
+6.Build the job and see output in the console..
+
+Same steps for python
+4.Windows Batch commands
+ cd C:\Users\Pauras\Desktop\Devops\jenkinsinstall
+ python hello.py
+
+
+ Done! 

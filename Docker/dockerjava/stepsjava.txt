@@ -1,0 +1,10 @@
+Open a Terminal in the Project Directory:
+Open a terminal in your docker-java-app directory.
+
+Build the Docker Image: 
+docker build -t java-docker .
+
+Run the Docker Container:
+docker run java-docker
+
+You should see the output

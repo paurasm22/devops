@@ -1,0 +1,26 @@
+1. In jenkins click on new Item
+2. Give a certain Name -> Pipeliines 
+3 . Go to script and select pipeline script 
+4 . Copy paste and excecute this 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello 1') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Hello 2') {
+            steps {
+                echo 'Hello World 2'
+            }
+        }
+        stage('Hello 3') {
+            steps {
+                echo 'Hello World 3'
+            }
+        }
+    }
+}
